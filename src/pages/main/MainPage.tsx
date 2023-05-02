@@ -17,19 +17,19 @@ export default function MainPage() {
                   className={classes.root}
                   justifyContent={'center'}
             >
-                <Grid item xs={12} sm={3}>
+                <Grid item xs={12} sm={4}>
                     <Card className={classes.card}>
                         <UsersList data={users} onItem={(user: User) => addItem(user)}/>
                     </Card>
                 </Grid>
 
-                <Grid item xs={12} sm={3}>
+                <Grid item xs={12} sm={4}>
                     <Card className={classes.card}>
                         <NewsList data={news} onItem={(news: News) => addItem(news)}/>
                     </Card>
                 </Grid>
 
-                <Grid item xs={12} sm={3}>
+                <Grid item xs={12} sm={4}>
                     <Card className={classes.card}>
                         <SelectedList data={selectedList} onItem={(item: User | News) => removeItem(item)}/>
                     </Card>

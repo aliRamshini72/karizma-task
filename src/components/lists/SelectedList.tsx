@@ -15,7 +15,7 @@ export default function SelectedList(props: Props) {
 
     return (
         <div className={classes.selectedList}>
-            {data.map((item: User | News) => <Chip onClick={() => onItem(item)}
+            {data.map((item: User | News) => <Chip key={item.id} onClick={() => onItem(item)}
                                                    label={"name" in item ? item.name : item.title}/>
             )}
         </div>

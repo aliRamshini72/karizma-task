@@ -24,11 +24,9 @@ export default function UsersList(props: UsersProps) {
                 <TextField value={value} onChange={onChange} className={classes.input} id="search-user"
                            label="search user ..." variant="outlined"/>
             </div>
-            <div className={classes.overflow}>
-                <ul className={classes.list}>
-                    {filteredUsers.map((user: User) => <UserItem key={user.id} user={user} onItem={onItem}/>)}
-                </ul>
-            </div>
+            <ul className={classes.list}>
+                {filteredUsers.map((user: User) => <UserItem key={user.id} user={user} onItem={onItem}/>)}
+            </ul>
         </div>
     )
 }

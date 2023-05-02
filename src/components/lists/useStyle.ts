@@ -16,9 +16,6 @@ const useStyles = makeStyles({
     input: {
         width: '100%'
     },
-    overflow: {
-        overflowY: 'auto',
-    },
     list: {
         padding: '0 1rem',
         listStyle: 'none',

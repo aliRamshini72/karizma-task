@@ -21,14 +21,14 @@ export default function NewsList(props: NewsProps) {
     return (
         <div className={classes.root}>
             <div className={classes.search}>
-                <TextField value={value} onChange={onChange} className={classes.input} id="search-news"
+                <TextField data-testid="search-news" value={value} onChange={onChange} className={classes.input} id="search-news"
                            label="search news ..." variant="outlined"/>
             </div>
-            <div className={classes.overflow}>
-                <ul className={classes.list}>
-                    {filteredNews.map((news: News) => <NewsItem key={news.id} news={news} onItem={onItem}/>)}
-                </ul>
-            </div>
+
+            <ul className={classes.list}>
+                {filteredNews.map((news: News) => <NewsItem key={news.id} news={news} onItem={onItem}/>)}
+            </ul>
+
         </div>
     )
 }
